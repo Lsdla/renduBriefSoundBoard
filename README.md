@@ -1,16 +1,16 @@
-Je veux que quand je clique sur une touche du clavier, que le son correspondant à ce clavier se mette en marche; comme je n’ai que 9 sons, je vais les relier qu’à 9 touches du clavier qui sont : azertyuio. 
-Pour ça je vais chercher le nombre correspondant à mes touches que je vais insérer dans ma balise audio la propriété data-key; je vais utiliser l'événement keydown. J'ajoute une méthode pour jouer l’audio et une autre pour reprendre du début. J'ajoute une fonction qui supprime ma class créee avec le DOM pour lier mon css, à la fin du son la classe css doit se supprimée. Une fois que tout fonction je ferrai le css en créant des classList avec les nom que j’ai déjà dans mon css et pour finir j’ajouterai mon media queri pour la version mobile. 
+ 	Au keyDown, j'aimerais que le son correspondant se mette en marche, je vais relier mes 9 sons aux 9 touches du clavier qui sont : azertyuio. Pour poubvoir le faire, je vais chercher le nombre correspondant à mes touches (avec l'event.keyCode) que je vais insérer dans ma balise audio en utilisant la  propriété data-key. J'ajoute une méthode pour jouer l’audio(play()) et une autre pour reprendre du début(currentTime()). J'ajoute une fonction qui add ma class css dans le DOM au key-down , à la fin du son la classe css doit se supprimer. 
 
-Pour mon mobile, je mets un clique à la place du keydown ; je change la taille de disques. 
+Pour mon mobile, je mets un clique à la place du keydown ; je change la taille des disques pour que ça soit plus agencé. 
+
 voici le plan des fichiers: 
 
 index.html:
-	Importer les vocaux;
-		main
-			section 
-				div id
-					bouton id, 
-				audio data-key,
+Importer les vocaux;
+main
+section 
+div id
+bouton id, 
+audio data-key,
 
 
 JS
