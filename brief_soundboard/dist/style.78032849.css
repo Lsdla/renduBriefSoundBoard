@@ -63,11 +63,15 @@ button.sound-active {
 /* DECOMMENTER LES LIGNES EN DESSOUS ET COMPLETER LES 
   cela permettra d'ajouter une règle de mise en forme de 
  */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .btn-container {
     flex: 0 0 auto;
     width: 50%;
-    margin-top: 80px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+  #bg-image-container{
+    display: none;
   }
 }
 

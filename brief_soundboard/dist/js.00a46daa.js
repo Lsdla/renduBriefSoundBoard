@@ -128,13 +128,13 @@ exports.all = all;
 function soundBoard() {
   document.addEventListener('keydown', function (e) {
     var key = e.keyCode;
-    var audio = document.querySelector("audio[data-key=\"".concat(key, "\"]")); // autre écriture ("audio[data-key="+key+"]")
+    var audio = document.querySelector("audio[data-key=\"".concat(key, "\"]")); // autre écriture ("audio[data-key="+'"'+key+'"'+"]")
 
-    var btn_container = document.getElementById(key); // ça récupère la valeur du button, car il a l'id retournant la chiffre de qhaque touche
+    var btn_container = document.getElementById(key); // ça récupère la valeur du button, car il a l'id retournant le chiffre de qhaque touche
 
     if (!audio) {
       return;
-    } // pour stoper la fonction en cas de valeur nulle. 
+    } // cette condition permet de ne rien retourner si l'audio n'existe pas. 
 
 
     audio.currentTime = 0;
@@ -150,11 +150,11 @@ function soundBoardMobile() {
   document.addEventListener('click', function (e) {
     //comme le click n'a pas besoin des même const du clavier, donc avec le getAttribute pour récupérer les Id des buttons 
     var id = e.target.getAttribute('id');
-    var audio = document.querySelector("audio[data-key=\"".concat(id, "\"]")); // autre écriture ("audio[data-key="+id+"]")
+    var audio = document.querySelector("audio[data-key=\"".concat(id, "\"]")); // autre écriture ("audio[data-key=""+id+""]")
 
     if (!audio) {
       return;
-    } // pour stoper la fonction en cas de valeur nulle. 
+    } // même condition en cas de clique ailleurs sur le clavier.
 
 
     audio.currentTime = 0;
@@ -204,7 +204,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56345" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52423" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

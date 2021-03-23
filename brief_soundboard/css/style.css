@@ -70,4 +70,7 @@ button.sound-active {
     margin-top: 30px;
     padding-bottom: 20px;
   }
+  #bg-image-container{
+    display: none;
+  }
 }
